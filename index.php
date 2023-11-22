@@ -57,6 +57,7 @@ $hotels = [
         <div class="container-md">
             <div class="row">
                 <div class="col">
+                    <h1 class="text-center">Hotel</h1>
 
             <table class="table">
                         <thead>
@@ -70,7 +71,14 @@ $hotels = [
                             </tr>
                         </thead>
                 <tbody>
-                                <?php foreach ($hotels as $hotel) { ?>
+                                <?php foreach ($hotels as $hotel) {
+                                    if($hotel['parking'] === true){
+                                        $hotel['parking'] = 'yes';
+                                    } else{
+                                        $hotel['parking'] = 'no';
+                                    };
+                                    
+                                    ?>
                                     <tr>
                                         <td><?php echo $hotel['name'] ?></td>
                                         <td><?php echo $hotel['description'] ?></td>
