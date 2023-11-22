@@ -58,80 +58,39 @@ $hotels = [
             <div class="row">
                 <div class="col">
 
-                    <table class="table">
-
+            <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">name</th>
                                 <th scope="col">description</th>
                                 <th scope="col">parking</th>
                                 <th scope="col">vote</th>
-                                <th scope="col">distance to center</th>
+                                <th scope="col">distance to center<th>                       
+                                             
                             </tr>
                         </thead>
-                        <tbody>
-
-                            <?php
-                            foreach ($hotels as $hotel) {
-                                // var_dump($hotel);
-                                foreach ($hotel as $key => $value) {
-                                    var_dump($key, $value);
-                                    ?>
+                <tbody>
+                                <?php foreach ($hotels as $hotel) { ?>
                                     <tr>
-                                        <!-- <td><?php echo $key ?></td> -->
-                                        <td><?php echo $value ?></td>
+                                        <td><?php echo $hotel['name'] ?></td>
+                                        <td><?php echo $hotel['description'] ?></td>
+                                        <td><?php echo $hotel['parking'] ?></td>
+                                        <td><?php echo $hotel['vote'] ?></td>
+                                        <td><?php echo $hotel['distance_to_center'] ?></td>
                                     </tr>
-                                    <?php
-                                };
-                            }
-                            ?>
-                        </tbody>
-                    </table> 
+                                <?php } ?>
+                </tbody>
+              
+            </table>
 
-
-
-                    <!-- <table class="table">
-
-                        <thead>
-                            <tr>
-                            <?php
-                            foreach ($hotels as $hotel) {
-                                // var_dump($hotel);
-                                foreach ($hotel as $key => $value) {
-                                    // var_dump($key, $value);
-                                    ?>
-                                    <th scope="col"><?php echo $key ?></th>
-                                    
-                                    <?php
-                                };
-                            }
-                            ?>
-                            </tr>
-                            <!-- <tr>
-                                <th scope="col"><?php echo $key ?></th>
-                                <th scope="col">description</th>
-                                <th scope="col">parking</th>
-                                <th scope="col">vote</th>
-                                <th scope="col">distance to center</th>
-                            </tr> -->
-                        </thead>
-                        <!-- <tbody>
-
-                                    <tr>
-                                        <!-- <td><?php echo $key ?></td> -->
-                                        <td><?php echo $value ?></td>
-                                    </tr>
-                        </tbody> -->
-                    </table> -->
-                    
                 </div>
             </div>
         </div>
-        
+
     </section>
-    
-    
-    
+
+
+
 </body>
 
 </html>
