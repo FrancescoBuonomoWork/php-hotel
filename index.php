@@ -39,6 +39,9 @@ $hotels = [
     ],
 
 ];
+
+$hotel_keys= array_keys($hotels[0]);
+// var_dump($hotel_key);
 // var_dump($hotels);
 ?>
 <!DOCTYPE html>
@@ -77,7 +80,42 @@ $hotels = [
                                     } else{
                                         $hotel['parking'] = 'no';
                                     };
-                                    
+
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $hotel['name'] ?></td>
+                                        <td><?php echo $hotel['description'] ?></td>
+                                        <td><?php echo $hotel['parking'] ?></td>
+                                        <td><?php echo $hotel['vote'] ?></td>
+                                        <td><?php echo $hotel['distance_to_center'] ?></td>
+                                    </tr>
+                                <?php } ?>
+                </tbody>
+              
+            </table>
+
+
+            <table class="table">
+                        <thead>
+                            <tr>
+                                <?php foreach($hotel_keys as $hotel_key){
+                                    // str_replace('_',' ',$hotel_key); 
+                                 ?>
+                                 
+                                 <th scope="col"><?php echo  str_replace('_',' ',$hotel_key)?></th>
+                                 <?php  
+                                }?>
+                                             
+                            </tr>
+                        </thead>
+                <tbody>
+                                <?php foreach ($hotels as $hotel) {
+                                    if($hotel['parking'] === true){
+                                        $hotel['parking'] = 'yes';
+                                    } else{
+                                        $hotel['parking'] = 'no';
+                                    };
+
                                     ?>
                                     <tr>
                                         <td><?php echo $hotel['name'] ?></td>
