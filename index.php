@@ -62,8 +62,11 @@ $hotels = [
 
                         <thead>
                             <tr>
-                                <th scope="col">Chiave</th>
-                                <th scope="col">Valore</th>
+                                <th scope="col">name</th>
+                                <th scope="col">description</th>
+                                <th scope="col">parking</th>
+                                <th scope="col">vote</th>
+                                <th scope="col">distance to center</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,26 +75,63 @@ $hotels = [
                             foreach ($hotels as $hotel) {
                                 // var_dump($hotel);
                                 foreach ($hotel as $key => $value) {
-                                    // var_dump($key, $value);
-                            ?>
+                                    var_dump($key, $value);
+                                    ?>
                                     <tr>
-                                        <td><?php echo $key ?></td>
+                                        <!-- <td><?php echo $key ?></td> -->
                                         <td><?php echo $value ?></td>
                                     </tr>
-                            <?php
+                                    <?php
                                 };
                             }
                             ?>
                         </tbody>
-                    </table>
+                    </table> 
 
+
+
+                    <!-- <table class="table">
+
+                        <thead>
+                            <tr>
+                            <?php
+                            foreach ($hotels as $hotel) {
+                                // var_dump($hotel);
+                                foreach ($hotel as $key => $value) {
+                                    // var_dump($key, $value);
+                                    ?>
+                                    <th scope="col"><?php echo $key ?></th>
+                                    
+                                    <?php
+                                };
+                            }
+                            ?>
+                            </tr>
+                            <!-- <tr>
+                                <th scope="col"><?php echo $key ?></th>
+                                <th scope="col">description</th>
+                                <th scope="col">parking</th>
+                                <th scope="col">vote</th>
+                                <th scope="col">distance to center</th>
+                            </tr> -->
+                        </thead>
+                        <!-- <tbody>
+
+                                    <tr>
+                                        <!-- <td><?php echo $key ?></td> -->
+                                        <td><?php echo $value ?></td>
+                                    </tr>
+                        </tbody> -->
+                    </table> -->
+                    
                 </div>
             </div>
         </div>
-
+        
     </section>
-
-
+    
+    
+    
 </body>
 
 </html>
